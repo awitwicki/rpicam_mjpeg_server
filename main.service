@@ -1,0 +1,12 @@
+[Unit]
+Description=Python Script with Virtual Environment
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/flask_env/bin/python3 /home/pi/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
